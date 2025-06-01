@@ -32,11 +32,34 @@ to execute it, we will use the terminal of Docker Desktop or we can even use cmd
 ``docker run hello-world``
 
 
-# **Now we will learn how to create an image and store it in the registry**
+# **Now we will learn how to create an image and execute an image**
+
+# **NOTE: WE USED VS CODE FOR THIS DEMONSTRATION**
 
 * Lets say we have a .py file already with us having the required code.
 
 * We have a requirements.txt file
 
 * Now we will create a Dockerfile having these things listed in it (BWCRPC) --> ``Base image, working dir, copy, run, port, command``
+
+``AFTER HAVING ALL THE FILES READY, WE WILL OPEN THE TERMINAL AND USE THESE COMMANDS.``
+
+docker build -t hasnat5577/table .
+
+docker run -p 5555:5000 hasnat5577/table    (to check it is working on localhost)
+
+docker login
+
+docker push hasnat5577/laptop:latest         (hasnat5577 is the namespace (username on dockerhub), laptop is the image name,   
+                                              :latest is the tag)
+
+docker pull hasnat5577/laptop:latest          (after pushing it, we are going to pull it)
+
+
+docker run -p 8501:8501 hasnat5577/laptop:latest
+
+
+
+
+
 
